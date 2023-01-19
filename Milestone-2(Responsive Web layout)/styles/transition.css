@@ -1,0 +1,76 @@
+body{
+    background-color: burlywood;
+}
+.container{
+    display: flex;
+ justify-content: space-around;
+    align-items: center;
+flex-wrap: wrap;
+    background-color: aqua;
+}
+.box{
+    width: 200px;
+    height: 160px;
+    border: 2px solid yellow;
+    background-color: chocolate;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 5px;
+
+}
+.inner{
+    width: 100px;
+    height: 100px;
+    background-color: cornsilk;
+    border: 2px solid red;
+    border-radius: 5px;
+    margin: 0 auto;
+   text-align: center;
+
+}
+.b1{
+    transition-property: width;
+    transition-duration: 2s;
+    transition-delay: .3s;
+    transition-timing-function:ease;
+}
+.b1:hover{
+    width: 180px;
+}
+/*     */
+.b2{
+    transition-property: height;
+    transition-duration: 2s;
+    transition-delay: .3s;
+    transition-timing-function:ease-in;
+}
+.b2:hover{
+    height: 160px;
+}
+.b3{
+    transition-property: width;
+    transition-duration: 2s;
+    transition-delay: .3s;
+    transition-timing-function:ease-in-out;
+}
+.b3:hover{
+    width: 180px;
+}
+.b4{
+    transition-property: height;
+    transition-duration: 2s;
+    transition-delay: .3s;
+    transition-timing-function:ease-out;
+}
+.b4:hover{
+    width: 160px;
+}
+.b5{
+    transition-property: width;
+    transition-duration: 2s;
+    transition-delay: .3s;
+    transition-timing-function:linear;
+}
+.b5:hover{
+    width: 170px;
+}

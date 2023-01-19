@@ -1,0 +1,48 @@
+.stage{
+    height: 560px;
+    width: 1060px;
+    border: 2px solid black;
+    background-color: aqua;
+}
+.ball{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid yellow;
+    background-color: blue;
+    position: relative;
+    margin: 2px;
+    animation: slider 2s linear .1s infinite alternate backwards;
+    animation-play-state: running;
+}
+
+@keyframes slider 
+
+{
+ 0%{
+    background-color: blue;
+    left: 0px;
+    top:0px;
+}
+
+ 25%{
+    background-color: rgb(108, 108, 200);
+    transform: scale(0.5);
+    top:500px;
+ }
+ 50%{
+    background-color: burlywood;
+transform: scale(1);
+    top: 0px;
+ }
+ 75%{
+    background-color: rgb(134, 226, 6);
+transform: scale(0.5);
+    top:500px;
+ }
+ 100%{
+    background-color: rgb(8, 9, 7);
+    left:1000px;
+    top:0px;
+ }
+}

@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(64, 68, 68);
+    border: 5px solid rgba(160, 187, 237, 0.938)
+}
+h1{
+    color:rgba(248, 235, 235, 0.779);
+    text-align: center;
+    background-color: rgb(132, 130, 128);
+    padding:5px;
+    border: 2px solid blanchedalmond;
+    margin: 3px;
+}
+.para {
+         color: rgba(243, 172, 172, 0.795);
+         text-align: center;
+         margin:3px;
+         padding: 2px;
+}
+.para1{
+    background-color: rgb(56, 33, 24);
+    border: 2px solid yellowgreen;
+}
+.para2, .para3, .para4 {
+    color:whitesmoke;
+background-color: rgba(167, 169, 151, 0.735);
+width:200px;
+margin:auto;
+border: 2px solid grey;
+font-weight:800;
+}
+.container{
+    background-color:darkslategray ;
+    margin: 3px;
+    border: 5px solid black;
+    padding:2px;
+    text-align: center;
+}
+h2{
+    color: rgba(153, 165, 12, 0.932);
+    
+    border: 1px solid yellow;
+}
+.imp{
+    color:rgb(204, 204, 225);
+    padding:3px;
+    font-weight: 600;
+    text-decoration: underline solid rgb(139, 5, 5);
+}
+.image{
+    padding:3px;
+    border: 3px solid yellowgreen;
+}
+img{
+    border: 1px solid burlywood;
+ 
+   border-radius: 5px;
+
+}
+.bpara{
+    color: chartreuse;
+    font-weight: bolder;
+    text-align: center;
+    margin:2px;
+    padding: 3px;
+}
+#sp1{
+    color: blue;
+
+}
+#sp2{
+    color:red;
+
+}
+button{
+    background-color: rgb(82, 90, 74);
+    border:2px solid black;
+    border-radius: 5px;
+}
+footer{
+    padding:3px;
+    margin:2px;
+    border: 2px solid red;
+    background-color: rgb(101, 97, 90);
+}
+.fot{
+    color: rgba(9, 21, 188, 0.941);
+    font-weight: bolder;
+}
+#sp3{
+    color: red;
+}

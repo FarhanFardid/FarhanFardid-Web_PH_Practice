@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox login form
+
+    </title>
+    <style>
+        .form{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            justify-content: center;
+            border: 2px solid red;
+            margin: 5px;
+            padding: 5px;
+            background-color: aqua;
+           
+        }
+        .form h2{
+            text-align: center;
+        }
+        .form label, input{
+            padding: 5px;
+        }
+        .form input[type ="submit"]{
+            width: 25%;
+            height: 30px;
+            padding:5px
+            font-size:2em;
+            font-weight:700;
+            text-align:center;
+            margin: 0px auto;
+            margin-top: 10px;
+
+
+        }
+        .container{
+            border: 2px solid yellowgreen;
+            display: flex;
+            justify-content: center;
+            height: 500px;
+            align-items: center;
+            background-color: cadetblue;
+
+        }
+        .navbar{
+            background-color:gray;
+          
+            width:100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            
+        }
+        .navbar a{
+            color: white;
+            font-size: 20px;
+            font-weight: 600;
+            padding: 10px;
+           text-decoration: none;
+        }
+        .primary {
+            margin: 10px;
+        }
+        .secondary {
+            margin: 10px;
+            
+        }
+
+        .secondary a{
+color: black;
+        }
+    </style>
+</head>
+<body>
+   <nav class="navbar">
+    <div class="primary">
+        <a href="#">Home</a>
+        <a href="#">Dashboard</a>
+        <a href="#">Profile</a>
+    </div>
+   <div class="secondary">
+    <a href="#">User</a>
+    <a href="#">Logout</a>
+   </div>
+ 
+   </nav>
+    <div class="container">
+       
+        <div class="form">
+            <h2>Please Sign Up the Form </h2>
+            <label for="name">Name:</label>
+            <input type="text" placeholder="Enter your Name"> 
+            <label for="email">Email:</label>
+            <input type="email" placeholder="Enter your email">
+            <input type="submit" value="Submit">
+        </div>
+
+    </div>
+   
+</body>
+</html>

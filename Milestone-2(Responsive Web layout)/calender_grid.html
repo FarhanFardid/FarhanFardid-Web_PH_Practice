@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Calender</title>
+    <style>
+        body{
+            background-color: coral;
+        }
+        main{
+            border: 3px solid lawngreen;
+            border-radius: 5px;
+        }
+        .calender{
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-template-rows: repeat(5,80px);
+            background-color: aqua;
+            border: 2px solid gold;
+            padding: 5px;
+            gap: 10px;
+        }
+        .week{
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-template-rows: 50px;
+            background-color: gray;
+            border: 2px solid wheat;
+            padding: 10px;
+            gap: 5px;
+        }
+        .date, .day{ 
+            font-weight: 600;
+            font-size: larger;
+            border: 1px solid blue;
+            border-radius: 10px;
+            text-align: center;
+            padding: 5px;
+        }
+        .day{
+            padding-top: 10px;
+            color: brown;
+            background-color: cadetblue;
+        }
+        .clr{
+            background-color: burlywood;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <main>
+    <div class="week">
+        <div class="day">Sat</div>
+        <div class="day">Sun</div>
+        <div class="day">Mon</div>
+        <div class="day">Tue</div>
+        <div class="day">Wed</div>
+        <div class="day">Thu</div>
+        <div class="day">Fri</div>
+    </div>
+    <div class="calender">
+        <div class="date clr">
+            <h2>30</h2>
+        </div>
+        <div class="date clr ">
+            <h2>31</h2>
+        </div>
+        <div class="date">
+            <h2>1</h2>
+        </div>
+        <div class="date">
+            <h2>2</h2>
+        </div>
+        <div class="date">
+            <h2>3</h2>
+        </div>
+        <div class="date">
+            <h2>4</h2>
+        </div>
+        <div class="date">
+            <h2>5</h2>
+        </div>
+        <div class="date">
+            <h2>6</h2>
+        </div>
+        <div class="date">
+            <h2>7</h2>
+        </div>
+        <div class="date">
+            <h2>8</h2>
+        </div>
+        <div class="date">
+            <h2>9</h2>
+        </div>
+        <div class="date">
+            <h2>10</h2>
+        </div>
+        <div class="date">
+            <h2>11</h2>
+        </div>
+        <div class="date">
+            <h2>12</h2>
+        </div>
+        <div class="date">
+            <h2>13</h2>
+        </div>
+        <div class="date">
+            <h2>14</h2>
+        </div>
+        <div class="date">
+            <h2>15</h2>
+        </div>
+        <div class="date">
+            <h2>16</h2>
+        </div>
+        <div class="date">
+            <h2>17</h2>
+        </div>
+        <div class="date">
+            <h2>18</h2>
+        </div>
+        <div class="date">
+            <h2>19</h2>
+        </div>
+        <div class="date">
+            <h2>20</h2>
+        </div>
+        <div class="date">
+            <h2>21</h2>
+        </div>
+        <div class="date">
+            <h2>22</h2>
+        </div>
+        <div class="date">
+            <h2>23</h2>
+        </div>
+        <div class="date">
+            <h2>24</h2>
+        </div>
+        <div class="date">
+            <h2>25</h2>
+        </div>
+        <div class="date">
+            <h2>26</h2>
+        </div>
+        <div class="date">
+            <h2>27</h2>
+        </div>
+        <div class="date">
+            <h2>28</h2>
+        </div>
+        <div class="date">
+            <h2>29</h2>
+        </div>
+        <div class="date">
+            <h2>30</h2>
+        </div>
+        <div class="date clr">
+            <h2>1</h2>
+        </div>
+        <div class="date clr">
+            <h2>2</h2>
+        </div>
+        <div class="date clr">
+            <h2>3</h2>
+        </div>
+        
+    </div>
+</main>
+</body>
+</html>
