@@ -4,3 +4,5 @@ var rem = num % div;
 console.log("The given number is: " + num);
 console.log("the number of divider: " +div);
 console.log("The remainder is : "+ rem );
+var nam=false ;
+console.log(typeof nam);
