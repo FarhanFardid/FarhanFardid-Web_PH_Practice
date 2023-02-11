@@ -9,23 +9,24 @@
 <body>
 
     <h1>Javascript Can Perform Event Handler on Input Field </h1>
-    <h4 id = "h4">This will change by the value of the input field. </h4>
+    <h4 id="h4">This will change by the value of the input field. </h4>
 
-    <form >
-        <input id="text" type="text" placeholder="Enter something ">
+ 
+        <input id="text_field" type="text" placeholder="Enter something ">
         <button id="btn"> Update </button>
-    </form>
+
 
     <script>
-     const update = document.getElementById('btn');
-     update.addEventListener('click',function (){
+     document.getElementById('btn').addEventListener('click',function (){
 
-        console.log("Update is clicked");
-     });
+    
+        const input_value = document.getElementById('text_field');
+       const text = input_value.value;
+       const heading = document.getElementById('h4');
+       heading.innerText = text;
+       input_value.value ='';
+     })
 
-       
-       
-     
     </script>
 </body>
 </html>
