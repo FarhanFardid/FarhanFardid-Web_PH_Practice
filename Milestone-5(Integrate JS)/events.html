@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Events</title>
+    <style>
+        body{
+            text-align:center;
+            font-weight: 200;
+            background-color: aqua;
+        }
+        button{
+            background-color: rgb(102, 102, 162);
+            color: azure;
+            font-weight: 600;
+            padding: 10px;
+            border-radius: 6px;
+            margin: 5px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Javascript Events</h1>
+
+    <p>This is an example of javascript events</p>
+    <!-- option -1  -->
+        <div>
+            <button onclick="console.log('Hello from JS events')"  >
+                Click Me to See A Text
+            </button>
+        </div>
+<!-- option-1 bonus  -->
+    <div>
+        <button onclick="document.body.style.backgroundColor = 'yellow' " > Click Me to make me Yellow</button>
+    </div>
+<!-- option - 2 -->
+    <div>
+        <button onclick = "blue()" >
+            Make Me Blue
+
+        </button>
+
+    </div>
+<!-- option -3 -->
+    <div>
+       <button id="orange"> Make Me Orange</button>  
+   
+    </div>
+    <!-- option -3 bonus -->
+    <div>
+        <button id="red"> Make Me Red</button>  
+    
+     </div>
+
+     <!-- option-4  -->
+     <div>
+        <button id="green">
+            Make Me Green
+
+
+        </button>
+     </div>
+     <div>
+        <button id="pink">
+            Make Me Pink
+
+
+        </button>
+     </div>
+
+    <script>
+        function blue(){
+            document.body.style.backgroundColor = "blue";
+        }
+
+        const orange = document.getElementById('orange');
+        orange.onclick = function org(){
+            document.body.style.backgroundColor = 'orange';
+        }
+        const red_btn = document.getElementById('red');
+        red_btn.onclick = red;
+
+      function red(){
+       document.body.style.backgroundColor = 'red';
+      }
+
+      const green_btn = document.getElementById('green');
+      green_btn.addEventListener('click', green);
+
+      function green()
+{
+    document.body.style.backgroundColor ='green';
+}        
+
+const pink_btn = document.getElementById('pink');
+      pink_btn.addEventListener('click', function pink(){
+        document.body.style.backgroundColor = 'pink';
+      });
+
+        
+    </script>
+</body>
+</html>
