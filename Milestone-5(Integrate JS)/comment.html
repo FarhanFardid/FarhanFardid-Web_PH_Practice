@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Add using JS Event Handler</title>
+</head>
+<body>
+    
+    <section id="sec-1">
+        <h2>Please, Add your comment below</h2>
+        <div id="comment-container">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis consequatur quos illo, iusto aperiam, quisquam quidem, vel autem aliquid pariatur sint ad possimus. Facere quasi doloribus officia modi sint libero, vel dolorum ex ipsa ratione possimus odit consequatur repellat, vitae esse sed ipsam quia blanditiis ullam veniam. Vero, in id!</p>
+            <p>Neque illo error dolores perferendis non facere id quas, iste suscipit enim sed, impedit voluptatibus quos autem optio et porro unde explicabo ratione necessitatibus. Aliquam doloribus repellendus placeat perspiciatis praesentium rem, porro repellat accusantium voluptatibus deserunt iusto temporibus recusandae, quasi ducimus natus atque dicta suscipit. Sunt nobis corrupti temporibus in.</p>
+            <p>Provident dolorem nisi, praesentium vitae dolore commodi non. Non eius qui consequatur, sint ipsum aliquid reprehenderit? Magnam sunt rem odit iste qui, nam error consequatur adipisci esse deserunt voluptatum quod enim ducimus praesentium nisi rerum vel totam? In quae perferendis minus ducimus nisi incidunt earum pariatur officia ratione consectetur. Officia.</p>
+        </div>
+
+        <div>
+        <textarea name="" id="text_area" cols="45" rows="5" placeholder="Please, comment here"></textarea>
+        <div>
+            <button id="com_btn">post</button>
+        </div>
+  
+        </div>
+    </section>
+    <script>
+        const comment_btn = document.getElementById('com_btn');
+        comment_btn.addEventListener('click', function(){
+           
+            const textField = document.getElementById('text_area');
+         
+            const comments = textField.value;
+            const comment_container =  document.getElementById('comment-container');
+            const p = document.createElement('p');
+            p.innerText = comments;
+           
+            comment_container.appendChild(p);
+            textField.value = '';
+        })
+    </script>
+</body>
+</html>

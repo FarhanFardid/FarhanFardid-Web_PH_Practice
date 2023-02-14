@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Delete Button Function</title>
+</head>
+<body>
+    <h2 >Welcome To Functional Github Delete Button </h2>
+    <p id="secret">This will be deleted if you type 'delete' in the text field and press remove button </p>
+
+    <input id="text-field" type="text" placeholder="write delete to remove ">
+     <button id="rmv-btn" disabled>Remove</button>
+
+     <script>
+             const textField= document.getElementById('text-field');
+             textField.addEventListener('keyup', function(){
+                const text = textField.value;
+                const btn = document.getElementById('rmv-btn');
+                if(text === 'delete'){
+                    btn.removeAttribute('disabled');
+
+                } 
+                else{
+                    btn.setAttribute('disabled', true);
+                }
+             })
+
+            document.getElementById('rmv-btn').addEventListener('click', function(){
+               document.getElementById('secret').style.display='none';
+            })
+
+     </script>
+</body>
+</html>
