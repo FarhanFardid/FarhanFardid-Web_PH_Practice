@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handler Practice</title>
+</head>
+<body>
+    <h2>JS Event Handler Number Practice </h2>
+
+    <div>
+        <input id="input_field" type="number" placeholder="Enter a number">
+        <button id="double-btn">Double
+
+        </button>
+        <button id="triple-btn">Triple</button>
+        <p> The modified number is: <span id="mod"> </span> </p>
+
+
+    </div>
+    <script>
+        const double =document.getElementById('double-btn');
+        double.addEventListener('click', function(){
+            const inputField = document.getElementById('input_field');
+            const number= parseFloat(inputField.value);
+            const res = number * 2;
+            document.getElementById('mod').innerText = res;
+        })
+        const triple =document.getElementById('triple-btn');
+        triple.addEventListener('click', function(){
+            const inputField = document.getElementById('input_field');
+            const number = parseFloat(inputField.value);
+            const res = number * 3;
+            document.getElementById('mod').innerText = res;
+        })
+    </script>
+</body>
+</html>
