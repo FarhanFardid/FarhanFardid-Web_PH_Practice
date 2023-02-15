@@ -7,16 +7,20 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Bank</title>
  </head>
- <body>
+ <body class="bg-teal-400">
    
     <h2 class="text-5xl p-8 text-center">Welcome to <span class="text-red-500 font-bold "> Common JS Bank</span>!!!</h2>
 "
-    <div class="m-8 border-2 border-solid rounded-lg border-gray-800 p-6">
+    <div class="m-8 border-2 border-solid rounded-lg border-gray-800 p-6 bg-cyan-600 text-center">
         <h4 class="text-3xl text-center font-semibold text-blue-800 mb-5">Login Please </h4>
-        <input class="p-2 block w-3/4 mb-5 mx-auto " type="email" id = "email" placeholder="Enter Your Email Address">
-        <input class="p-2 block w-3/4 mb-5 mx-auto" type="password" name="" id="pass" placeholder="Enter Your Password">
+        <input class="p-2 block w-3/4 mb-5 mx-auto border-2 border-amber-400 " type="email" id = "email" placeholder="Enter Your Email Address">
+        <input class="p-2 block w-3/4 mb-5 mx-auto border-2 border-amber-400" type="password" name="" id="pass" placeholder="Enter Your Password">
+        <div>
+            <button id="log-btn" class="bg-amber-600 border-2 rounded-lg px-8 py-3  mt-3 font-semibold text-white  hover:bg-sky-700">Login</button>
+        </div>
+    
     </div>
    
-
+<script src="javascript/bank_login.js"></script>
  </body>
  </html>
