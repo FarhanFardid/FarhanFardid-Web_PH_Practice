@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Text Editor</title>
+</head>
+<body>
+    <div class="bg-lime-500 text-center p-3 m-3 border-2 rounded-lg">
+    <h2 class="text-3xl text-white font-blod p-2">My Text Editor</h2>
+    <hr class="border-2 border-gray-700">
+    <div class="bg-green-500 p-3 border-3 rounded-lg">
+        <div>
+           <button class="border-gray-600 hover:bg-sky-600 border-2 rounded-lg font-semibold m-2 px-3" id="bold">Bold</button>
+           <button class="border-gray-600 hover:bg-sky-600 border-2 rounded-lg font-semibold m-2 px-3" id="ita">Italic</button>
+           <button class="border-gray-600 hover:bg-sky-600 border-2 rounded-lg font-semibold m-2 px-3" id="und">Underline</button>
+           <button class="border-gray-600 hover:bg-sky-600 border-2 rounded-lg font-semibold m-2 px-3" id="right">Right Aln</button>
+           <button class="border-gray-600 hover:bg-sky-600 border-2 rounded-lg font-semibold m-2 px-3" id="left">Left Aln</button>
+           <button class="border-gray-600 hover:bg-sky-600 border-2 rounded-lg font-semibold m-2 px-3" id="center">Center Aln</button>
+           <button class="border-gray-600 hover:bg-sky-600 border-2 rounded-lg font-semibold m-2 px-3" id="justify">Justify</button>
+           <button class="border-gray-600 hover:bg-sky-600 border-2 rounded-lg font-semibold m-2 px-1 w-30" id="size">Text size <input type="number" class="w-20"  id="num" min = "12"></button>
+           <button class="border-gray-600 hover:bg-sky-600 border-2 rounded-lg font-semibold m-2 px-1 w-30" id="color">Text Color <input type="color" class="w-20"  id="spc" ></button>
+        </div>
+        <div>
+            <textarea class="p-3 m-2 border-2 rounded-lg border-amber-600" id="textarea" cols="40" rows="5" placeholder="Please, type something and apply any modification button above to see the effects"></textarea>
+        </div>
+    </div>
+</div>
+<script>
+    document.getElementById('bold').addEventListener('click', function(){
+
+         document.getElementById('textarea').style.fontWeight="bold";
+       
+    
+    })
+    document.getElementById('ita').addEventListener('click', function(){
+
+document.getElementById('textarea').style.fontStyle="italic";
+
+
+})
+document.getElementById('und').addEventListener('click', function(){
+
+document.getElementById('textarea').style.textDecoration="underline";
+
+
+})
+document.getElementById('right').addEventListener('click', function(){
+
+document.getElementById('textarea').style.textAlign="right";
+
+
+})
+document.getElementById('left').addEventListener('click', function(){
+
+document.getElementById('textarea').style.textAlign="left";
+
+
+})
+document.getElementById('center').addEventListener('click', function(){
+
+document.getElementById('textarea').style.textAlign="center";
+
+
+})
+document.getElementById('justify').addEventListener('click', function(){
+
+document.getElementById('textarea').style.textAlign="justify";
+
+
+})
+document.getElementById('size').addEventListener('click', function(){
+    
+
+let num = parseInt(document.getElementById('num').value);
+ let size  = num +'px' ;
+
+document.getElementById('textarea').style.fontSize = size;
+
+// document.getElementById('textarea').style.fontSize = num +'px';
+
+
+
+})
+
+document.getElementById('color').addEventListener('click', function(){
+    
+
+    let clr = (document.getElementById('spc').value);
+    
+    document.getElementById('textarea').style.color = clr;
+    
+    
+    
+    
+    
+    })
+
+
+</script>
+</body>
+</html>

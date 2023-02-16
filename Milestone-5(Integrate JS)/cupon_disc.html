@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Discount</title>
+</head>
+<body>
+    <h1 class="text-3xl text-red-700 text-center m-5 p-3 font-bold">Coupon Card Discount</h1>
+    <div class="w-3/4 border-2 rounded-lg bg-sky-500 mx-auto m-2 p-3 text-center">
+        <h3 class="text-2xl p-2 text-white"> Price : <span id="price">1000</span>Tk</h3>
+        <label class="font-semibold">Coupon: </label>
+        <input id="coupon" type="text" class="bg-red-300 m-2 p-2">
+        <button id="btn" class="border-gray-600 border-2 rounded-lg px-3 mx-2 py-1 hover:bg-amber-500 font-bold hover:text-white"> Apply</button>
+
+        <h2 class="border-2 rounded-lg w-1/4 mx-auto p-3 m-2 font-bold">Please pay : <span id="pay" class="text-blue-800"> 0</span>Tk</h2>
+    </div>
+    
+    <script>
+        document.getElementById('btn').addEventListener('click', function(){
+            const coupon = document.getElementById('coupon').value;
+            const price = parseFloat(document.getElementById('price').innerText);
+
+            if(coupon === 'Disc30'){
+                const dis = price * 0.3;
+                const pay = price - dis ;
+
+                document.getElementById('pay').innerText = pay;
+
+                 document.getElementById('coupon').value = '';
+            }
+            else{
+                alert("The Coupon is not matched or incorrect");
+                document.getElementById('pay').innerText = price;
+                document.getElementById('coupon').value = '';
+            }
+        })
+    </script>
+</body>
+</html>
