@@ -32,3 +32,27 @@ const data = [
       
     },
   ];
+ 
+  function showImg1 (){
+let img1Container = document.getElementById('img1');
+img1Container.innerHTML = `<img src= "${data[0].imageURL}" class="card-img-top" alt="image1">` 
+
+  }
+
+  function showImg2 (){
+    let img2Container = document.getElementById('img2');
+    img2Container.innerHTML = `<img src= "${data[1].imageURL}" class="card-img-top" alt="image1">` 
+    
+      }
+
+showImg1();
+
+
+  document.getElementById('card1_title').innerText = data[0].name;
+  document.getElementById('card1_body').innerText = data[0].description;
+  document.getElementById('card1_btn').innerText = data[0].price;
+
+  document.getElementById('card2_title').innerText = data[1].name;
+  document.getElementById('card2_body').innerText = data[1].description;
+  document.getElementById('card2_btn').innerText = data[1].price;
+  showImg2();
