@@ -23,3 +23,9 @@ console.log(res);
 const number_arr=[2,5,3,46,78,67,54,3,9];
 const odd= number_arr.filter(x=> x%2);
 console.log(odd);
+
+// অনেকগুলা সংখ্যার একটা array হবে। তারপর তোমার কাজ হবে array এর উপরে map ইউজ করে। প্রত্যেকটা উপাদানকে ৭ দিয়ে ভাগ করে ভাগফল আরেকটা array হিসেবে রাখবে। পুরা কাজটা এক লাইনে হবে। 
+
+const arr=[34, 67, 98,45,30,98];
+const res2 = arr.map(x => (x/7).toFixed(2));
+console.log(res2);
