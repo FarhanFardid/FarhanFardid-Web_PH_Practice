@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Form</title>
+</head>
+<body>
+    <div class="container text-center border-2 border border-dark rounded-2 m-3">
+        <h2 class="p-3 fw-bolder">Contact Us </h2>
+           
+       <div class="text-center p-3 m-2">
+        <div class="p-2 m-1">
+            Name: <input type="text"  id="name" placeholder="Enter your name"> 
+            <button class="btn btn-primary border-2 rounded-1" id="sn-btn">Send Name</button>  
+            <button class="btn btn-danger border-2 rounded-1" id="rn-btn">Remove Name</button>
+        </div>
+          <div class="p-2 m-1">
+            E-mail: <input type="email"  id="email" placeholder="Enter your email"> 
+            <button class="btn btn-primary border-2 rounded-1" id="se-btn">Send E-mail</button> 
+            <button class="btn btn-danger border-2 rounded-1" id="re-btn">Remove E-mail</button>   
+          </div>
+      <div class="p-2 m-1">
+        Message: <textarea type="text" id="msg" placeholder="Message" rows="2" cols="20">   
+        </textarea> 
+         <button class="btn btn-primary border-2 rounded-1" id="sm-btn">Send Message</button>  
+         <button class="btn btn-danger border-2 rounded-1" id="rm-btn">Remove Message</button>
+      </div>
+     
+      <button class="btn btn-primary border-2 rounded-1" id="send-btn">Send All</button> 
+      <button class="btn btn-warning border-2 rounded-1" id="rmv-btn">Reset All</button> 
+           
+       </div>
+    </div>
+
+    <script src="20.form.js"></script>
+</body>
+</html>
