@@ -54,3 +54,20 @@ const showSavedCart = ()=>{
 }
 
 showSavedCart();
+//   const results = getResultDetails();
+  
+//   const resultsStr = JSON.stringify([...results,  {
+//     marks: totalMark,
+//     examTime: timeTaken.innerText,
+//     status: grade.status,
+//   },
+// ]);
+//   localStorage.setItem('results', resultsStr) ;
+// const getResultDetails = ()=>{
+//   let results = [];
+//   const storage = localStorage.getItem('results');
+//   if(storage){
+//       results = JSON.parse(storage);
+//   }
+//   return results;
+// }
