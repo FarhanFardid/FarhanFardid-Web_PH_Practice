@@ -1,0 +1,12 @@
+var a =7 ;
+var b =7;
+var result1 = (a > b);
+var result2 = (a < b);
+var result3 = (a >= b);
+var result4 = (a <= b);
+var result5 = (a == b);
+console.log(result1);
+console.log(result2);
+console.log(result3);
+console.log(result4);
+console.log(result5);
