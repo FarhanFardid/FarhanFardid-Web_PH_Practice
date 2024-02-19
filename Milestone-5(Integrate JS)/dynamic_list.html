@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body>
+    
+    <div id="container">
+        <h2>Dynamic List</h2>
+        <ul id="list-node">
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, id.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, incidunt fugit.</li>
+        </ul>
+    </div>
+    <button id="btn">Add new Item</button>
+
+    <script>
+        document.getElementById("btn").addEventListener("click", function (){
+            const listNode = document.getElementById("list-node");
+            const li = document.createElement('li');
+            li.innerText= "This New item is added by dynamic button";
+            listNode.appendChild(li);
+        })
+
+        document.getElementById("list-node").addEventListener('click', function(event){
+            const list =document.getElementById("list-node");
+            list.removeChild(event.target);
+        })
+    </script>
+</body>
+</html>

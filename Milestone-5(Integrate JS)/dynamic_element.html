@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+    <style>
+        .blog-container{
+            border: 2px solid red;
+            padding: 5px;
+            margin: 2px;
+        }
+#btn{
+    padding: 2px;
+    margin: 0 auto;
+    background-color: aqua;
+    color:blue;
+    font-weight: bold;
+}
+    </style>
+</head>
+<body>
+
+    
+    <section>
+        <div class="blog-container" id="blog-container">
+            <h3>Blog</h3>
+            <p>Blog-1: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam beatae quos modi tempore nisi numquam ducimus animi perferendis quod sed! Perferendis voluptates delectus, beatae itaque fugiat dicta id praesentium pariatur.</p>
+            <p>Blog-2: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed culpa in commodi facilis? Quis amet placeat deserunt nisi laborum, praesentium magnam explicabo ut. Odio aliquid cum laborum.</p>
+
+        </div>
+        <textarea name="blog" id="blog" cols="30" rows="10" placeholder="Write Content"></textarea>
+        <button id="btn">Add New Blog</button>
+    </section>
+    <script>
+        const btn = document.getElementById("btn");
+        btn.addEventListener('click', function(){
+            const content = document.getElementById("blog").value;
+            const blog_Container = document.getElementById("blog-container");
+            const p = document.createElement('p');
+            p.innerText= content;
+            blog_Container.appendChild(p);
+            document.getElementById("blog").value = ' ';
+        })
+    </script>
+</body>
+</html>
