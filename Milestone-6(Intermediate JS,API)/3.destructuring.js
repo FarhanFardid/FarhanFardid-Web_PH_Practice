@@ -13,7 +13,7 @@ console.log(brand,year);
 const {name, age}= {name: 'john', age: 70, country: 'USA'};
 console.log(name, age);
 
-// array desturucturing
+// array destructuring
 
 const numbers =[70,57,438,34,93,80];
 
