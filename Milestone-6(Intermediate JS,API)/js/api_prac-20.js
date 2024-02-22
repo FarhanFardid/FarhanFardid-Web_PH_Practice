@@ -6,18 +6,18 @@
 // .then (res => res.json())
 // .then (data => displayData(data));
 
-// function displayData(data){
-//     console.log(data);
-// }
+function displayData(data){
+    console.log(data);
+}
 
 
 // 2. Fetching data using async and await Techniques
 
 const loadData = async () =>{
-    const url = 'https://jsonplaceholder.typicode.com/posts';
+    const url = 'https://www.thesportsdb.com/api/v1/json/3/search_all_teams.php?s=Soccer&c=Spain'
     const res= await fetch(url);
     const data = await res.json();
-    loadedDataDisplay(data);
+    displayData(data);
 }
 
 function loadedDataDisplay(loadedData){
