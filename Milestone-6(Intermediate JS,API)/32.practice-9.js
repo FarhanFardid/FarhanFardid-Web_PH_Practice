@@ -16,5 +16,16 @@ console.log(onlyValue);
 let sum = numbers.reduce((previous,current) => {
     return current = previous + current;
 }, 0);
-
 console.log(sum);
+
+let sum2 = numbers.reduce((previous,current) =>current = previous + current , 0);
+console.log(sum2);
+
+let x = 1;
+let y = true;
+if(x == y){
+    console.log("True");
+}
+else{
+    console.log('false');
+}
