@@ -92,3 +92,8 @@ padding: 20px;
     justify-content: center;
     height: 600px;
 }
+.span{
+    color:blue;
+    font-size: medium;
+    font-weight: 800;
+}
