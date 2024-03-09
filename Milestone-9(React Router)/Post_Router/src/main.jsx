@@ -7,6 +7,7 @@ import Home from './components/Home/Home.jsx';
 import Posts from './components/Posts/Posts.jsx';
 import Post from './components/Post/Post.jsx';
 import App from './App.jsx';
+import Error from './components/Error/Error.jsx';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
     element:<Post></Post>,
     loader:({params})=>fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`)
 
+  },
+  {
+    path: "*",
+    element: <Error></Error>
   }
 ]}
 ])

@@ -5,9 +5,9 @@ const Posts = () => {
     const loadedPosts = useLoaderData();
     // console.log(loadedPosts);
     return (
-        <div className="home">
+        <div className="blog_container">
             <h3 className="home-header">   Welcome to Blog Page</h3>
-            <p>Total Available Post: {loadedPosts.length}</p>
+            <h4>Total Available Post: {loadedPosts.length}</h4>
             {
                 loadedPosts.map(post => <div 
                 className="post"

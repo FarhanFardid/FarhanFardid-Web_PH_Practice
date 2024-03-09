@@ -9,8 +9,8 @@ const Post = () => {
         <div className="home">
         <div className="blog">
             <h2>Blog Id: {id}</h2>
-            <h3>Blog Title: {title}</h3>
-            <h4>Main Content: {body}</h4>
+            <h4>Blog Title: {title}</h4>
+            <p>Main Content: {body}</p>
         </div>
         </div>
     );

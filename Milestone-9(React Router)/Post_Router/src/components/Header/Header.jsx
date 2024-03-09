@@ -7,7 +7,7 @@ const Header = () => {
             <div className="header-text">React Router Practice Website</div>
             <div className="link_container">  
            <div> <Link to="/home">Home</Link></div>
-          <div>  <Link to="/posts">See Blogs</Link></div>
+          <div>  <Link to="/posts">All Blogs</Link></div>
             </div>
           
      

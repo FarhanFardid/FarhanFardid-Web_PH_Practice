@@ -29,9 +29,11 @@
 
 .home{
      background-color: blanchedalmond;
-     height: auto;
+     height: 700px;
      width: 100%;
+     padding-top:10px ;
 }
+
 .home-header{
     color:blue;
     font-size: xx-large;
@@ -47,7 +49,12 @@
 font-size: larger;
 padding: 20px;
 }
-
+.blog_container{
+        background-color: blanchedalmond;
+        height: auto;
+        width: 100%;
+   
+}
 .post{
     border: 2px solid rgb(207, 105, 105);
     padding: 10px;
@@ -66,6 +73,22 @@ padding: 20px;
     color:blue;
 }
 .blog{
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
     padding: 20px;
+    margin-top: 100px;
+}
+
+.error{
+    background-color: blanchedalmond;;
+    color:red;
+    font-size: xx-large;
+    font-weight: bolder;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
 }

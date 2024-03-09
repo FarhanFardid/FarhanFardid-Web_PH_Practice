@@ -2,9 +2,9 @@
 const Home = () => {
     return (
         <div className="home">
-     <h3 className="home-header">   Welcome to Website Home Page</h3>
+     <h3 className="home-header">   Welcome to Blog Website Home Page</h3>
      <section className="home-text">
-<p className="text-header">Welcome to Our Blog</p> 
+<p className="text-header">Welcome to Our Blog Website</p> 
 
 <p>Explore the latest and most engaging content on our blog! Our website is built with React Router, providing a seamless navigation experience. We leverage the JSONPlaceholder API to dynamically fetch and display blog posts on our home page.</p>
 
