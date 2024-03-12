@@ -7,7 +7,7 @@ const Home = () => {
     console.log(user);
     return (
         <div>
-            <h2>Welcome to website Home page  {user && <span>{user.email}</span> }</h2>
+            <h2 style={{textAlign:"center" , fontSize: "40px", margin: "10px" }}>Welcome to website Home page  {user && <span>{user.email}</span> }</h2>
             <p></p>
         </div>
     );
