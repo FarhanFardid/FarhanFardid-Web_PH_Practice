@@ -15,12 +15,12 @@ const Login = () => {
         const form = event.target;
         const email = form.email.value;
         const password =form.password.value;
-        console.log(email, password);
+        // console.log(email, password);
 
         signInWithEmailAndPassword(auth,email,password)
         .then(res => {
              const loggedUser = res.user;
-             console.log(loggedUser);
+            //  console.log(loggedUser);
              setSuccess('Successfully Logged in');
              setError('');
             form.reset();

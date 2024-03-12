@@ -24,7 +24,7 @@ const formSubmit = event =>{
         createUserWithEmailAndPassword(auth, email,password)
         .then(res => {
             const loggedUser= res.user;
-            console.log(loggedUser);
+            // console.log(loggedUser);
             setSuccess("Successfully Registered");
             event.target.reset();
             setErr('');
@@ -51,7 +51,7 @@ const formSubmit = event =>{
       updateProfile(user, {
         displayName: name  })
         .then(res=> {
-          console.log(res);
+          // console.log(res);
         })
         .catch(error =>{
           console.log(error);

@@ -15,12 +15,12 @@ const Register = () => {
         event.preventDefault();
         const email = event.target.email.value;
         const password =event.target.password.value;
-        console.log(email, password);
+        // console.log(email, password);
 
         createUserWithEmailAndPassword(auth, email, password)
        .then (res=> {
         const loggedUser = res.user;
-        console.log(loggedUser);
+        // console.log(loggedUser);
         setErr('');
         setMsg("Successfully Registered");
     event.target.reset( );

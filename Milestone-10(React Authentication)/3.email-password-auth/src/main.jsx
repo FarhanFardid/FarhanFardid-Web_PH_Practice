@@ -8,12 +8,17 @@ import Root from './components/Root'
 import Login from './components/Login'
 import Register from './components/Register/Register'
 import RBS from './components/ReactBS/RBS'
+import App from './App';
 
 const router = createBrowserRouter(
   [
     {path:'/',
     element:<Root></Root>,
     children:[
+      {
+        path:'/',
+        element:<App></App>
+      },
   {
     path:'login',
     element:<Login></Login>
