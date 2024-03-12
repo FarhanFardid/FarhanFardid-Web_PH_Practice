@@ -1,58 +1,30 @@
 import React, { useState } from 'react';
-import {GithubAuthProvider, GoogleAuthProvider, getAuth, signInWithPopup, signOut} from 'firebase/auth'
+import {GithubAuthProvider, GoogleAuthProvider, getAuth} from "firebase/auth";
 import app from '../../firebase/firebase.init';
 
+
 const Login = () => {
-    const [user,setUser] = useState(null);
+const [user,setUser] = useState(null);
     const auth = getAuth(app);
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
+ 
+    const handleGoogle =()=>{
 
-
-    const handleGoogleLog = () =>{
-
-       signInWithPopup (auth, googleProvider)
-       .then((result) => {
-        const loggedUser = result.user;
-        setUser(loggedUser);
-        console.log(loggedUser);
-       })
-       .catch ((error) => {
-        console.log("error", error.message);
-       })
     }
 
-    const handleGithubLog =() =>{
-        signInWithPopup(auth, githubProvider)
-        .then (res => {
-            const loggedUser= res.user;
-            setUser(loggedUser);
-            console.log(loggedUser);
-        })
+    const handleGitHub  =()=>{
+        
     }
 
-    const handleSignOut = () => {
-        signOut(auth)
-        .then (result => {
-            setUser(null);
-            console.log(result);
-        })
-        .catch(error => console.log(error));
-    }
     return (
         <div>
-            <h2>This is login Page</h2>
-            { user ? 
-            <button onClick={handleSignOut}>Sign Out</button> :
-           <div> <button onClick={handleGoogleLog}>Google Login</button>
-           <button onClick={handleGithubLog}>GitHub Login</button></div>
-            }
+        <h2>Welcome to Login Page</h2>
 
-           { user && <div>
-                <h3>User: {user.displayName}</h3>
-                <p>Email: {user.email ? user.email : "farhanfardid62@gmail.com"} </p>
-                <img src={user.photoURL} alt="" />
-            </div>}
+<h3>Login with Google or GitHub</h3>
+<button onClick={handleGoogle} style={{border : "2px solid black"}}> Login with Google</button>
+<button onClick={handleGitHub} style={{border : "2px solid black", margin: "2px"}}> Login with GitHub</button>
+
         </div>
     );
 };
