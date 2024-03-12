@@ -5,9 +5,9 @@ import {GoogleAuthProvider, getAuth, signInWithPopup, signOut} from 'firebase/au
 
 const auth = getAuth(app);
 const Google = () => {
-    const [msg,setMsg] = useState(''); 
-    const [err,setErr] = useState('');
-    const [user,setUser] = useState('');
+    const [msg,setMsg] = useState(' '); 
+    const [err,setErr] = useState(' ');
+    const [user,setUser] = useState(null);
     const googleProvider = new GoogleAuthProvider();
 
     const googleHandle = event =>{
@@ -17,10 +17,10 @@ const Google = () => {
             setUser(loggedUser);
             console.log(loggedUser);
             setMsg("Successfully Logged In");
-            setErr("");
+            setErr(" ");
         })
         .catch(error => console.log(error));
-        setMsg("");
+        setMsg(" ");
         setErr("Login Failed");
 
     }
@@ -28,9 +28,9 @@ const Google = () => {
         signOut(auth)
         .then(res=> {
             console.log(res);
-           setUser("");
+           setUser(" ");
             setMsg("Successfully Logout");
-            setErr("");
+            setErr(" ");
         })
         .catch(error=>{
             console.log(error);

@@ -8,4 +8,4 @@ const Home = () => {
     );
 };
 
-export default Home;<h2>Welcome to Firebase Google,Github login and Email Login and Sign up Practice Session </h2>
+export default Home;

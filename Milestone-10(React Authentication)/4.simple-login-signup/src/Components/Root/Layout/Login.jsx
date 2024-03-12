@@ -8,8 +8,8 @@ import app from '../../../Firebase/firebase.config';
 const auth= getAuth(app);
 const Login = () => {
 
-    const [success,setSuccess] = useState('');
-    const [err,setErr] = useState('');
+    const [success,setSuccess] = useState(' ');
+    const [err,setErr] = useState(' ');
     const [show,setShow] = useState('false');
         const emailRef = useRef();
 
@@ -24,12 +24,12 @@ const Login = () => {
         .then (res=> {
             const loggedUser = res.user;
             setSuccess("successfully Logged In");
-            setErr("");
+            setErr(" ");
         })
         .catch(error => {
             console.log(error);
             setErr("Log in Failed");
-            setSuccess("");
+            setSuccess(" ");
         } )
     }
 
@@ -64,7 +64,7 @@ const Login = () => {
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Password</Form.Label>
-        <Form.Control type={show ? "password" : "text"} placeholder="Enter Password" name="password" required/> <small className='ts-xs display-inline ' onClick={displayPass}>Show Password</small> 
+        <Form.Control type={show ? "text" : "password"} placeholder="Enter Password" name="password" required/> <small className='ts-xs display-inline ' onClick={displayPass}>{show? "Hide Password" : "Show Password"}</small> 
         
       </Form.Group>
       <p className='p-2'>Don't Have an Account?<Link to="/register" className='btn btn-link text-white'>please Register</Link>  </p>
