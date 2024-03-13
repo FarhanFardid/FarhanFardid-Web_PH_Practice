@@ -7,7 +7,7 @@ const Header = () => {
         <div>
              <Navbar bg="dark" data-bs-theme="dark">
         <Container className="d-flex justify-content-between">
-          <Navbar.Brand href="">React Auth Context</Navbar.Brand>
+          <Navbar.Brand href=""className="fw-bold text-info" >React Auth Context</Navbar.Brand>
           <div>
           <Nav className="me-auto">
             <NavLink ><Link className="text-decoration-none text-info fw-bold " to="/">Home</Link></NavLink>

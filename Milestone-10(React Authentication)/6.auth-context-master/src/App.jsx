@@ -10,7 +10,7 @@ function App() {
   return (
     <>
      
-      <h1 className='bg-success p-3 rounded-2 text-white'>React Auth Context Master</h1>
+      <h1 className='bg-black p-3 rounded-2 text-white'>React Auth Context Master</h1>
       <Header></Header>
       <Outlet></Outlet>
      

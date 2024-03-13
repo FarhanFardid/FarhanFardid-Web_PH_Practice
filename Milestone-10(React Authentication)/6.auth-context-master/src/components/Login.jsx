@@ -3,7 +3,7 @@
 const Login = () => {
     return (
         <div>
-            This is login
+         <h2 className="bg-info p-3 ">Welcome to Login Page</h2>
         </div>
     );
 };

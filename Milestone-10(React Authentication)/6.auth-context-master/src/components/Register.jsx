@@ -3,7 +3,7 @@
 const Register = () => {
     return (
         <div>
-            This is register page
+            <h2 className="bg-info p-3 ">Welcome to Register Page</h2>
         </div>
     );
 };
