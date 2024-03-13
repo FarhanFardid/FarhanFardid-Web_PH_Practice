@@ -12,7 +12,7 @@ const Header = () => {
           <Nav className="me-auto">
             <NavLink ><Link className="text-decoration-none text-info fw-bold " to="/">Home</Link></NavLink>
             <NavLink><Link  className="text-decoration-none text-info fw-bold " to="/inventory">Inventory</Link></NavLink>
-            <NavLink> <Link className="text-decoration-none text-info fw-bold " to="/register">Register</Link></NavLink>
+            <NavLink> <Link className="text-decoration-none text-info fw-bold " to="/register">Sign Up</Link></NavLink>
             <NavLink> <Link className="text-decoration-none text-info fw-bold " to="/login">Login</Link></NavLink>
     
            
