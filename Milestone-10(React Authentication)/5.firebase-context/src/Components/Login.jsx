@@ -12,12 +12,12 @@ const handleLogin = event =>{
     const form  = event.target;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(email,password);
+    // console.log(email,password);
 
     signUser(email,password)
     .then (result => {
         const loggedUser = result.user;
-        console.log(loggedUser);
+        // console.log(loggedUser);
         form.reset();
     })
     .catch(error => {
@@ -30,7 +30,7 @@ const loginGoogle = () =>{
   googleLogin()
   .then(result => {
     const loggedUser = result.user;
-    console.log(loggedUser);
+    // console.log(loggedUser);
   })
   .catch(error => {console.log(error)})
 

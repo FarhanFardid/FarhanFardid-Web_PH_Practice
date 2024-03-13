@@ -19,7 +19,7 @@ console.log(createUser);
         createUser(email,password)
         .then (result => {
             const loggedUser = result.user;
-            console.log(loggedUser);
+            // console.log(loggedUser);
             form.reset();
         })
         .catch (error => {
