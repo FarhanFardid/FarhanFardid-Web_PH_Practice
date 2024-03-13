@@ -1,8 +1,18 @@
+import { useContext, useState } from "react";
 import { FloatingLabel, Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { AuthContext } from "./Providers/AuthProvider";
 
 
 const Login = () => {
+    const [user,setUser] = useState(null);
+    const { handleSignIn , googleSignIn,githubSignIn} = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
+    const from = location.state?.from?.pathname  || "/" ;
+    console.log(location.state);
+    console.log(from);
+
 
     const handleSubmit= (event) =>{
     event.preventDefault();
@@ -11,6 +21,40 @@ const Login = () => {
     const pass = form.password.value;
     console.log(email,pass);
 
+   handleSignIn(email,pass)
+   .then(result => {
+    const loggedUser = result.user;
+    setUser(loggedUser);
+    console.log(user);
+    navigate(from)
+   })
+   .catch(error => {
+    console.log(error);
+   })
+
+    }
+
+    const handleGoogle = () =>{
+        googleSignIn()
+        .then(result => {
+            const loggedUser = result.user;
+            setUser(loggedUser);
+            navigate(from)
+        })
+        .catch(error =>{
+            console.log(error);
+        })
+    }
+    const handleGithub = () =>{
+        githubSignIn()
+        .then(result => {
+            const loggedUser = result.user;
+             setUser(loggedUser);
+             navigate(from)
+        })
+        .catch(error => {
+            console.log(error);
+        })
     }
     return (
         <div className="bg-info">
@@ -31,7 +75,8 @@ const Login = () => {
       <button type="submit" className="border-2 text-dark bg-info px-3 py-2 fw-bold m-4 rounded-3">Login</button>
          </form>
          <div>
-            <button className="border-2 bg-dark rounded-4 px-3 py-2 fw-bold text-info m-3">Google Sign In</button>
+            <button onClick={handleGoogle} className="border-2 bg-dark rounded-4 px-3 py-2 fw-bold text-info m-3">Google Sign In</button>
+            <button onClick={handleGithub} className="border-2 bg-dark rounded-4 px-3 py-2 fw-bold text-info m-3">GitHub Sign In</button>
          </div>
          <div>
     <p className="text-black fw-bold fs-5 p-3">New to Auth Context Master ? Go to <Link to='/register' className="text-danger" >Sign Up</Link></p>

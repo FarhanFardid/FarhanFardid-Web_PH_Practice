@@ -1,8 +1,12 @@
+import { useContext } from "react";
 import { FloatingLabel, Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "./Providers/AuthProvider";
 
 
 const Register = () => {
+const navigate = useNavigate();
+const {handleSignUp,UpdateUser,logOut} = useContext(AuthContext);
 
     const handleSubmit =(event) =>{
         event.preventDefault();
@@ -11,6 +15,23 @@ const Register = () => {
         const email = form.email.value;
         const pass = form.password.value;
         console.log(name, email, pass);
+        handleSignUp(email,pass)
+        .then(result=> {
+            const signedUser = result.user;
+            console.log(signedUser);
+            UpdateUser(name)
+            .then(result=>{console.log(result)})
+            .catch(error =>{
+                console.log(error);
+          
+            })
+            form.reset();
+            logOut();
+          navigate ('/login');
+        })
+        .catch(error=>{
+            console.log(error)
+        })
     }
     return (
         <div className="bg-info">
