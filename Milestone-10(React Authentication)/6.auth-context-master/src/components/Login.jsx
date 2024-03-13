@@ -1,10 +1,15 @@
 import { FloatingLabel, Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 
 const Login = () => {
 
     const handleSubmit= (event) =>{
     event.preventDefault();
+    const form = event.target;
+    const email= form.email.value;
+    const pass = form.password.value;
+    console.log(email,pass);
 
     }
     return (
@@ -26,8 +31,12 @@ const Login = () => {
       <button type="submit" className="border-2 text-dark bg-info px-3 py-2 fw-bold m-4 rounded-3">Login</button>
          </form>
          <div>
-            <button className="border-2 bg-secondary rounded-4 px-3 py-2 fw-bold text-white m-3">Google Sign In</button>
+            <button className="border-2 bg-dark rounded-4 px-3 py-2 fw-bold text-info m-3">Google Sign In</button>
          </div>
+         <div>
+    <p className="text-black fw-bold fs-5 p-3">New to Auth Context Master ? Go to <Link to='/register' className="text-danger" >Sign Up</Link></p>
+</div>
+       
         </div>
     );
 };

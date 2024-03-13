@@ -1,10 +1,16 @@
 import { FloatingLabel, Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 
 const Register = () => {
 
     const handleSubmit =(event) =>{
         event.preventDefault();
+        const form = event.target;
+        const name = form.name.value;
+        const email = form.email.value;
+        const pass = form.password.value;
+        console.log(name, email, pass);
     }
     return (
         <div className="bg-info">
@@ -12,6 +18,13 @@ const Register = () => {
 
             <form onSubmit={handleSubmit} className="bg-dark p-5">
             <h4 className="text-white fs-3 py-4">Please Sign Up</h4>
+         <FloatingLabel
+        controlId="floatingInput"
+        label="User Name"
+        className="mb-3"
+      >
+        <Form.Control type="text" name="name" placeholder="Enter Name" />
+      </FloatingLabel>
          <FloatingLabel
         controlId="floatingInput"
         label="Email address"
@@ -25,6 +38,9 @@ const Register = () => {
       <button type="submit" className="border-2 text-dark bg-info px-3 py-2 fw-bold m-4 rounded-3">Sign Up</button>
          </form>
 
+<div>
+    <p className="text-black fw-bold fs-5 p-3">Already have an account? Go to <Link to='/login' className="text-danger" >Login</Link></p>
+</div>
        
         </div>
     );
